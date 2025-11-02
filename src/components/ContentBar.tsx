@@ -263,13 +263,13 @@ export const ContentBar = () => {
               onMouseLeave={() => { setHoveredBubble(null); setPopupPos(null); }}
             >
               {/* Bubble */}
-              <div className="glass-card px-6 py-3 bubble-pop cursor-pointer bg-gradient-to-br from-primary/20 to-accent/10 hover:from-primary/30 hover:to-accent/20">
+              <div className="glass-card px-6 py-3 bubble-pop cursor-pointer bg-gradient-to-br from-primary/20 to-accent/10 hover:from-primary/30 hover:to-accent/50">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-sm whitespace-nowrap">
                     {bubble.title}
                   </span>
                   <ChevronDown 
-                    className={`h-4 w-4 transition-transform duration-1000 ${
+                    className={`h-4 w-4 transition-transform duration-600 ${
                       hoveredBubble === index ? 'rotate-180' : ''
                     }`}
                   />
