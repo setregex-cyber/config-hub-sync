@@ -239,7 +239,7 @@ export const ContentBar = () => {
     const MARGIN = 8; // Safety margin from viewport edges
     const BASE_WIDTH = 384; // Tailwind w-96
 
-    const width = Math.min(BASE_WIDTH, vw - MARGIN * 2);
+    const width = Math.min(BASE_WIDTH, vw - MARGIN * 1.5);
     const centeredLeft = rect.left + rect.width / 2 - width / 2;
     const left = Math.max(MARGIN, Math.min(centeredLeft, vw - width - MARGIN));
 
@@ -269,7 +269,7 @@ export const ContentBar = () => {
                     {bubble.title}
                   </span>
                   <ChevronDown 
-                    className={`h-4 w-4 transition-transform duration-1000 ${
+                    className={`h-4 w-4 transition-transform duration-500 ${
                       hoveredBubble === index ? 'rotate-180' : ''
                     }`}
                   />
@@ -293,7 +293,7 @@ export const ContentBar = () => {
                       <div 
                         key={itemIndex}
                         /*className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all duration-5000"*/
-                        className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all [transition-duration:5000ms]"
+                        className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all [transition-duration:1000ms]"
 
                       >
                         <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
