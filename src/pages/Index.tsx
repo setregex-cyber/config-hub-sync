@@ -129,7 +129,7 @@ const Index = () => {
           </div>
           <div className="text-center">
             <p className="text-xl text-muted-foreground mb-4">
-              Build, test, and debug regex patterns instantly with AI-powered insights and multi-language code generation
+              Best AI Regex Tool Online. Instantly build, test, and debug regex patterns with AI insights and multi-language support.
             </p>
             <div className="flex justify-center">
               <RegexToolbar
