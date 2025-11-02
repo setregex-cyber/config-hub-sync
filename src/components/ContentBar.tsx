@@ -239,7 +239,7 @@ export const ContentBar = () => {
     const MARGIN = 8; // Safety margin from viewport edges
     const BASE_WIDTH = 384; // Tailwind w-96
 
-    const width = Math.min(BASE_WIDTH, vw - MARGIN * 1.5);
+    const width = Math.min(BASE_WIDTH, vw - MARGIN * 2);
     const centeredLeft = rect.left + rect.width / 2 - width / 2;
     const left = Math.max(MARGIN, Math.min(centeredLeft, vw - width - MARGIN));
 
@@ -263,13 +263,13 @@ export const ContentBar = () => {
               onMouseLeave={() => { setHoveredBubble(null); setPopupPos(null); }}
             >
               {/* Bubble */}
-              <div className="glass-card px-6 py-3 bubble-pop cursor-pointer bg-gradient-to-br from-primary/20 to-accent/10 hover:from-primary/30 hover:to-accent/50">
+              <div className="glass-card px-6 py-3 bubble-pop cursor-pointer bg-gradient-to-br from-primary/20 to-accent/10 hover:from-primary/30 hover:to-accent/20">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-sm whitespace-nowrap">
                     {bubble.title}
                   </span>
                   <ChevronDown 
-                    className={`h-4 w-4 transition-transform duration-600 ${
+                    className={`h-4 w-4 transition-transform duration-1000 ${
                       hoveredBubble === index ? 'rotate-180' : ''
                     }`}
                   />
@@ -290,7 +290,7 @@ export const ContentBar = () => {
                     {bubble.items.map((item, itemIndex) => (
                       <div 
                         key={itemIndex}
-                        className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all duration-1000"
+                        className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all duration-500"
                       >
                         <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
                           {item.heading}
