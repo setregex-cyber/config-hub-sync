@@ -290,7 +290,7 @@ export const ContentBar = () => {
                     {bubble.items.map((item, itemIndex) => (
                       <div 
                         key={itemIndex}
-                        className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all duration-500"
+                        className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all duration-5000"
                       >
                         <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
                           {item.heading}
