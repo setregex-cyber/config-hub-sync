@@ -317,7 +317,7 @@ const Index = () => {
                 <h3 className="font-semibold text-lg">setregex</h3>
               </div>
               <p className="text-sm text-muted-foreground mb-3">
-                The ultimate regular expression testing and debugging tool for developers.
+                The Best AI Regex Tool Online. Query Genie lets you create, test, and debug regex patterns and formulas with AI-powered insights.
               </p>
               <p className="text-xs text-muted-foreground">
                 © 2024 setregex. All rights reserved.
