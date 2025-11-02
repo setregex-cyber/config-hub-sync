@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 30% 97%;
+    --foreground: 222.2 84% 4.9%;
+    
+    /* Glassmorphism effects */
+    --glass-bg: 0 0% 100% / 0.4;
+    --glass-border: 0 0% 100% / 0.18;
+    --glass-shadow: 0 0% 0% / 0.1;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 220 70% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 120 60% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222.2 84% 4.9%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* Regex-specific colors */
+    --regex-match: 120 100% 85%;
+    --regex-group: 220 100% 85%;
+    --regex-highlight: 60 100% 85%;
+    
+    /* Ad placeholder colors */
+    --ad-background: 215 15% 95%;
+    --ad-border: 215 15% 85%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    
+    /* Glassmorphism effects - dark mode */
+    --glass-bg: 222.2 84% 4.9% / 0.4;
+    --glass-border: 210 40% 98% / 0.18;
+    --glass-shadow: 0 0% 0% / 0.3;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 220 70% 60%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 120 60% 60%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 76% 46%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 222.2 84% 4.9%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    /* Regex-specific colors - dark mode */
+    --regex-match: 120 80% 25%;
+    --regex-group: 220 80% 25%;
+    --regex-highlight: 60 80% 25%;
+    
+    /* Ad placeholder colors - dark mode */
+    --ad-background: 217.2 32.6% 12%;
+    --ad-border: 217.2 32.6% 20%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(220 40% 94%) 50%, hsl(240 30% 96%) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  .dark body {
+    background: linear-gradient(135deg, hsl(222.2 84% 4.9%) 0%, hsl(222.2 70% 8%) 50%, hsl(240 60% 6%) 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .regex-match {
+    @apply bg-[hsl(var(--regex-match))] px-1 rounded;
+  }
+  
+  .regex-group {
+    @apply bg-[hsl(var(--regex-group))] px-1 rounded;
+  }
+  
+  .regex-highlight {
+    @apply bg-[hsl(var(--regex-highlight))] px-1 rounded;
+  }
+  
+  .ad-placeholder {
+    @apply bg-[hsl(var(--ad-background))] border-2 border-dashed border-[hsl(var(--ad-border))] rounded-lg p-4 text-center text-muted-foreground;
+  }
+  
+  .floating-ad {
+    @apply fixed bottom-4 right-4 w-64 h-32 ad-placeholder z-50;
+  }
+  
+  .glass-effect {
+    background: hsla(var(--glass-bg));
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid hsla(var(--glass-border));
+    box-shadow: 0 8px 32px 0 hsla(var(--glass-shadow));
+  }
+  
+  .glass-card {
+    @apply glass-effect rounded-2xl;
+  }
+  
+  .bubble-pop {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .bubble-pop:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 12px 40px 0 hsla(var(--glass-shadow));
+  }
+}
