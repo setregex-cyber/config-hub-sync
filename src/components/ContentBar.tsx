@@ -239,7 +239,7 @@ export const ContentBar = () => {
     const MARGIN = 8; // Safety margin from viewport edges
     const BASE_WIDTH = 384; // Tailwind w-96
 
-    const width = Math.min(BASE_WIDTH, vw - MARGIN * 1.5);
+    const width = Math.min(BASE_WIDTH, vw - MARGIN * 1.5); // previous 2
     const centeredLeft = rect.left + rect.width / 2 - width / 2;
     const left = Math.max(MARGIN, Math.min(centeredLeft, vw - width - MARGIN));
 
@@ -263,7 +263,7 @@ export const ContentBar = () => {
               onMouseLeave={() => { setHoveredBubble(null); setPopupPos(null); }}
             >
               {/* Bubble */}
-              <div className="glass-card px-6 py-3 bubble-pop cursor-pointer bg-gradient-to-br from-primary/20 to-accent/10 hover:from-primary/30 hover:to-accent/20">
+              <div className="glass-card px-6 py-3 bubble-pop cursor-pointer bg-gradient-to-br from-primary/20 to-accent/10 hover:from-primary/30 hover:to-accent/30">
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-sm whitespace-nowrap">
                     {bubble.title}
@@ -293,8 +293,7 @@ export const ContentBar = () => {
                       <div 
                         key={itemIndex}
                         /*className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all duration-5000"*/
-                        className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all [transition-duration:1000ms]"
-
+                        className="group cursor-pointer p-3 rounded-lg hover:bg-primary/5 transition-all [transition-duration:300ms]"
                       >
                         <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
                           {item.heading}
