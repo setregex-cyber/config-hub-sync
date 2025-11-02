@@ -279,7 +279,9 @@ export const ContentBar = () => {
               {/* Popup Content */}
               {hoveredBubble === index && (
                 <Card
-                  className="fixed z-50 glass-card animate-fade-in p-6 shadow-2xl max-h-[70vh] overflow-y-auto overscroll-contain"
+                  /* className="fixed z-50 glass-card animate-fade-in p-6 shadow-2xl max-h-[70vh] overflow-y-auto overscroll-contain"*/
+                  className="fixed z-50 glass-card animate-fade-in p-6 shadow-2xl 
+             max-h-[70vh] overflow-y-auto overscroll-contain transition-all"
                   style={{
                     left: popupPos?.left,
                     top: popupPos?.top,
