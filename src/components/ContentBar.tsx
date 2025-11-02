@@ -180,7 +180,7 @@ const bubbleData: BubbleContent[] = [
       {
         heading: "Sign In / Sign Up",
         subheading: "Save your work across devices",
-        description: "Create a free account to sync your regex patterns and preferences. Access your pattern library from anywhere and never lose your work."
+        description: "Create a free account to sync your regex patterns and preferences. Access your pattern library from anywhere and never lose your work. Note: This feature will be available in the future"
       },
       {
         heading: "Save Pattern History",
